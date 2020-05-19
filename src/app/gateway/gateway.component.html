@@ -1,1 +1,84 @@
-<p>gateway works!</p>
+<mat-toolbar>
+
+    <mat-toolbar-row >
+            <span style="padding: 10px; margin: auto;">
+                Ajouter une Gateway
+            </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="col-sm m-2">
+        <mat-card>
+            <h4>Entrez vous infos</h4>
+            <form #gatewayForm=ngForm>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" style="width: 32%; padding: 4px;" >
+                       <input name="id" [(ngModel)]="gw.id" matInput placeholder="Entrer Id" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                      <input name="ip" [(ngModel)]="gw.ip" matInput placeholder="Entrer ip" required>
+                   </mat-form-field>
+  
+                    <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                       <input name="ipLocal" [(ngModel)]="gw.ipLocal" matInput placeholder="Entrer ipLocal" required>
+                    </mat-form-field>
+                </div>
+  
+                <div class="form-group">
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;" >
+                     <input name="Status" [(ngModel)]="gw.Status" matInput placeholder="Entrer status" required>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                    <input name="mqueueKey" [(ngModel)]="gw.mqueueKey" matInput placeholder="Entrer mqueueKey" required>
+                 </mat-form-field>
+                 
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                     <input name="adresse" [(ngModel)]="gw.adresse" matInput placeholder="Entrer adresse" required>
+                  </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;" >
+                     <input name="cp" [(ngModel)]="gw.cp" matInput placeholder="Entrer code postal" required>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                    <input name="ville" [(ngModel)]="gw.ville" matInput placeholder="Entrer ville" required>
+                 </mat-form-field>
+                 
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                     <input name="etage" [(ngModel)]="gw.etage" matInput placeholder="Entrer etage" required>
+                  </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;" >
+                     <input name="lastCommunication" [(ngModel)]="gw.lastCommunication" matInput placeholder="Entrer lastCommunication" required>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                    <input name="backDesc" [(ngModel)]="gw.backDesc" matInput placeholder="Entrer backDesc" required>
+                 </mat-form-field>
+                 
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                     <input name="userDesc" [(ngModel)]="gw.userDesc" matInput placeholder="Entrer userDesc" required>
+                  </mat-form-field>
+              </div>
+              <div class="form-group">
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;" >
+                     <input name="keyFota" [(ngModel)]="gw.keyFota" matInput placeholder="Entrer keyFota" required>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill" style="width: 32%; padding: 4px;">
+                    <input name="versionFirmware" [(ngModel)]="gw.versionFirmware" matInput placeholder="Entrer versionFirmware" required>
+                 </mat-form-field>
+                 
+              </div>
+           
+    
+              <button mat-raised-button color="primary" style="width: 150px;" type="submit" [disabled]="!gatewayForm.valid" (click)="onSubmitgateway()">Ajouter</button>
+            </form>
+        </mat-card>
+      </div>
