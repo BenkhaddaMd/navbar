@@ -11,8 +11,12 @@
   mat-sidenav-container a{
     font-family:sans-serif;
   }
+  mat-sidenav  a span {
+    color: rgba(248, 123, 6, 0.9);
+
+  }
   mat-sidenav  a{
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(248, 123, 6, 0.9);
     padding: 2px 1.5rem;
     font-size: 0.9rem;
     font-family: Open Sans, sans-serif;
@@ -47,13 +51,7 @@
   mat-toolbar button{
     margin-left:-16px;
   }
-  mat-sidenav mat-toolbar div {
-    color:#a517ba;
-   margin-left:21px;
-  
-  
-  
-  }
+
   mat-sidenav *{
     background-color: #fff !important;
   }
