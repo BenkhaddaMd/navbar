@@ -1,0 +1,143 @@
+<mat-sidenav-container class="example-container">
+
+    <mat-sidenav [ngStyle]="{'width': width  +'%' }"
+   (setWidth) = "setWidth ($event) "
+     appOpenSidebarOnSwipe #sidenav mode = "over" >   
+     <mat-toolbar class="">
+       <div class="" ><img src="../assets/logo-noir.jpg" style="width: 150px;"></div>
+    </mat-toolbar> 
+     <mat-nav-list color="primary">
+      <a mat-list-item routerLinkActive ="active" [routerLinkActiveOptions]="{exact:true}"  routerLink="" href="#" class="nav-link" >
+        <span class="material-icons" style="color:#2e2323;padding: 5px;">home</span> Home
+      </a>
+      <a mat-list-item routerLinkActive ="" routerLink="" href="#" class="nav-link" >
+          <span class="material-icons" style="color:#2e2323;padding: 5px;">
+            bookmarks
+            </span>Services
+      </a>
+      <a mat-list-item routerLinkActive ="" routerLink="" href="#" class="nav-link" >
+        <span class="material-icons" style="color:#2e2323;padding: 5px;">
+          label
+          </span> Produits
+      </a>
+      <a mat-list-item routerLinkActive ="" routerLink="" href="#" class="nav-link"  >
+        <span class="material-icons" style="color:#2e2323;padding: 5px;">
+          room
+          </span> Showroom
+      </a>
+      <a mat-list-item routerLinkActive ="" routerLink="" href="#" class="nav-link" >
+        <span class="material-icons" style="color:#2e2323;padding: 5px;">
+          perm_identity
+          </span> Recrutement
+      </a>
+  
+                  
+   </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color: rgb(241, 114, 68);" class="mat-toolbar">
+         <a (click)="sidenav.open()" >
+          <img src="../assets/logo.jpg" style="width: 60px; border-radius: 10px;"  alt="">
+        </a>
+        <img src="../assets/logo-text.png" style="width: 200px; border-radius: 10px;"  alt="">
+
+        <span class="spacer"></span>
+                <a mat-list-item class="nav-link shadow" style="padding: 3px 12px;" >Login</a>
+       </mat-toolbar>
+       
+       <ng-content></ng-content>
+  
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
+  
+  
+  
+  
+  
+  <!--
+  <div class="lang-container">
+  
+  </div>
+  
+  
+  <div class="limiter">  
+    <div class="container-login100">
+       
+        <div class="wrap-login100">
+            <div class="login100-form-title" style="background-image: url(assets/logo-noir.jpg);">
+        </div>
+  
+        <div class="login100-form-title-1" >
+            Devarchi DOMOTIC
+        </div>     
+        <br>
+        <br>
+        <div *ngIf="disabled" class="Register" style="color: red;">
+            your account is not activated please check your email for verification
+        </div>
+        <div *ngIf="NotYet" class="Register" style="color: red;">
+            Your credentials are incorrect.
+        </div>
+        <form class="login100-form " >
+            <div class="wrap-input100 m-b-26" >
+                <span class="label-input100"> username</span>
+                <input class="input100"
+             id="usernameId"
+             type="text"
+             placeholder=""
+             required
+             formControlName="username" [ngClass]="{'is-invalid': (loginForm.get('username').touched ||
+             loginForm.get('username').dirty) &&
+             !loginForm.get('username').valid }" />
+             <span class="invalid-feedback">
+                <span *ngIf="loginForm.get('username').errors?.minlength">
+                    The username must be longer than 5 characters.
+                  </span>
+                  <span *ngIf="loginForm.get('username').errors?.required">
+                    Please enter your username.
+                  </span>
+              </span>
+                <span class="focus-input100"></span>
+                
+            </div>
+            <br>
+            
+            <div class="wrap-input100 m-b-26" >
+                <span class="label-input100"> password</span>
+                <input class="input100"
+             id="passwordId"
+             type="password"
+             placeholder=""
+             formControlName="password" [ngClass]="{'is-invalid': (loginForm.get('password').touched ||
+             loginForm.get('password').dirty) &&
+             !loginForm.get('password').valid }" />
+             <span class="invalid-feedback">
+               <span *ngIf="loginForm.get('password').errors?.minlength">
+                    The password must be longer than 5 characters.
+                  </span>
+                  <span *ngIf="loginForm.get('password').errors?.required">
+                    Please enter your password.
+                  </span>
+              </span>
+                <span class="focus-input100"></span>
+            </div>
+            <div class="container-login100-form-btn">
+                <!-- <button type="submit" [disabled]="!loginForm.valid" class="login100-form-btn" routerLink="/home" routerActiveLink="active" >
+                    {{'LOGIN.LOGIN' | translate}}
+                </button> 
+                <button type="submit" [disabled]="!loginForm.valid" class="login100-form-btn" (click)="onSubmit()" >
+                   LOGIN
+                </button>
+            </div>
+           
+         
+        </form>
+       
+        <div class="Register">
+            Don't have an acount yet ? <a  class="link" routerLink="/register" routerActiveLink="active" >Register Now</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  -->
